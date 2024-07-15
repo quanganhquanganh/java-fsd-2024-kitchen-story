@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Story - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+          <a class="navbar-brand" href="index.html">Kitchen Story</a>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#" id="cart-icon">
+                      <i class="bi bi-cart"></i> Cart <span id="cart-count" class="badge bg-primary">0</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="pages/admin-login.html">Admin Login</a>
+              </li>
+          </ul>
+      </div>
+    </nav>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="cart-items">
+                  <!-- Cart items will be displayed here -->
+              </div>
+                <div class="modal-footer">
+                    <p class="me-auto">Total: $<span id="cart-total">0.00</span></p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Welcome to Kitchen Story</h1>
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <form id="search-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for food items" id="search-input">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="category-buttons" class="mb-4 text-center"></div>
+
+        <div id="product-list" class="row"></div>
+
+        <nav aria-label="Product navigation">
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+        </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
